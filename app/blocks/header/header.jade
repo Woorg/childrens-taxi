@@ -1,0 +1,27 @@
+include ../icon/icon
+
+mixin header()
+	.header
+		.header__in
+			a.header__logo.logo(href="#top") 
+				img.logo__image(src="assets/images/general/logo.png", alt="Семейный водитель")
+				.logo__text Семейный водитель
+			nav.header__nav.nav
+				input#nav-checkbox.nav__checkbox(type="checkbox" value='')
+				ul.nav__list
+					li.nav__item.nav__item_active
+						a.nav__link(href="#order") Заказать такси
+					li.nav__item 
+						a.nav__link(href="#about") О компании
+					li.nav__item
+						a.nav__link(href="#services") Услуги
+					li.nav__item
+						a.nav__link(href="#contacts") Контакты
+				label.nav__trigger(for="nav-checkbox")
+					+icon('menu', true).nav__icon
+					+icon('close', true).nav__icon-close
+					
+					
+			a.header__phone.phone(href="tel:+73433517255") 
+				span.phone__code +7(343)&nbsp;
+				| 351-72-55

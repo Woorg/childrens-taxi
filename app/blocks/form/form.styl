@@ -1,0 +1,456 @@
+.form
+	display block
+	font-size 14px
+	&_order
+		position relative
+		z-index 1
+		padding 0 0 0
+		background #fff
+		box-shadow 0px 4px 8px rgba(0,0,0,0.25)
+	&__rules
+		position absolute
+		z-index 0
+		top 0
+		right -36px
+		width 36px
+		height 129px
+		color #828282
+		background #fff
+		cursor pointer
+		box-shadow 0px 4px 8px rgba(0, 0, 0, 0.25)
+		+r(760px)
+			top auto
+			bottom -36px
+			right auto
+			left 0
+			width 129px
+			height 36px
+	&__rules-w
+		position relative
+		padding-top 26px
+		height 129px
+		+r(760px)
+			padding-top 4px
+			padding-left 20px
+			height 36px
+	&__rules-text
+		position absolute
+		top auto
+		right 0
+		left 0
+		bottom 26px
+		width: auto
+		font-size 14px
+		transform: rotate(-90deg)
+		+r(760px)
+			position static
+			padding-right 5px
+			display inline-block
+			vertical-align middle
+			transform: rotate(0)
+
+	&__rules-icon
+		position absolute
+		top 18px
+		left 6px
+		width 24px
+		height 24px
+		+r(760px)
+			position static
+			display inline-block
+			vertical-align middle
+			transform: rotate(90deg)
+	&__row
+		margin-left 25px
+		margin-right 25px
+		padding-top 25px
+		padding-bottom 25px
+		border-bottom 1px solid #BDBDBD
+	&__row_first
+		font-size 0
+		.form__field_text
+			position relative
+			width 210px
+			margin-right 36px
+			display inline-block
+			vertical-align top
+			&:last-child
+				margin-right 0
+			+r(760px)
+				margin-right 0
+				margin-bottom 20px
+				width 100%
+				&:last-child
+					margin-bottom 0
+	&__field_select
+		position relative
+		width 100%
+	&__input,
+	&__select
+		padding 10px 15px
+		width 100%
+		height 39px
+		background #FFF
+		font-size 14px
+		color #333
+		border 1px solid #828282
+		tr(all .3s ease)
+		&:focus +
+			label
+				position static
+				display none
+	&__select
+		height 39px
+		cursor pointer
+		option
+			width 100%
+			height 39px
+	&__label
+		position absolute
+		top 1px
+		right 1px
+		bottom 1px
+		left 1px
+		padding-left 15px
+		padding-right 15px
+		font-size 14px
+		line-height 40px
+		background #fff
+		color #828282
+		cursor pointer
+		sup
+			display inline-block
+			vertical-align middle
+			color red
+	&__gender
+		color #000
+		line-height 40px
+	&__gender-w
+		margin-left 28px
+		display inline-block
+		vertical-align middle
+		font-size 0
+		label
+			display block
+			color #BDBDBD
+			cursor pointer
+			tr(all .3s ease)
+		input
+			display none
+			&:checked +
+				label
+					color #219653
+	&__gender-item
+		margin-left 24px
+		display inline-block
+		vertical-align top
+		font-size 14px
+		&:first-child
+			margin-left 0
+
+
+
+.form__row_address
+	padding-left 40px
+	.form__field-w
+		position relative
+		&:after
+			position absolute
+			top 30px
+			left -34px
+			bottom 30px
+			width 1px
+			border-right 1px dashed #4F4F4F
+			content ''
+	.form__field_text
+		position relative
+		margin-bottom 20px
+		width 420px
+		display block
+		+r(760px)
+			width auto
+		&:after
+			position absolute
+			z-index 1
+			top 50%
+			left -40px
+			margin-top -7px
+			width 13px
+			height 13px
+			background #fff
+			border 1px solid #219653
+			border-radius 50%
+			content ''
+		&:last-child
+			&:after
+				position absolute
+				top 50%
+				left -39px
+				margin-top -6px
+				padding 1px
+				width 9px
+				height 9px
+				background #219653
+				border 1px solid #fff
+				border-radius 50%
+				content ''
+			&:before
+				position absolute
+				top 50%
+				left -40px
+				margin-top -7px
+				width 13px
+				height 13px
+				background #fff
+				border 1px solid #219653
+				border-radius 50%
+				content ''
+	.form__input
+		padding-left 20px
+		padding-right 20px
+		&:focus
+			border 1px solid #219653
+	.form__add-address
+		margin-left 20px
+		color #828282
+		text-decoration none
+.form__row_service
+	.form__label
+		padding 0 20px
+
+	.form__field_service
+		margin-bottom 20px
+		width 100%
+		.form__label
+			margin-right 20px
+	.form__field_gender,
+	.form__field_time
+		width 210px
+		display inline-block
+		vertical-align top
+		+r(760px)
+			width 100%
+	.form__field_time
+		margin-left 34px
+		width 210px
+		+r(760px)
+			margin-left 0
+			width 100%
+
+.form__row_quant
+	border-bottom 1px solid transparent
+	display flex
+	flex-direction row
+
+	justify-content space-between
+	align-items flex-end
+	+r(760px)
+		flex-wrap wrap
+		justify-content space-around
+
+.form__field_quant
+	+r(760px)
+		margin-bottom 20px
+		width 33%
+
+.form__quant-image
+	margin auto
+	margin-bottom 8px
+	display block
+
+.form__field_quant
+	position relative
+	text-align center
+	&:hover
+		.taxi-age
+			fill #157460
+		.form__quant
+			display block
+
+.form__field_0-8
+	.form__quant-image
+		width 20px
+		height 30px
+		fill #828282
+.form__field_8-7
+	.form__quant-image
+		width 17px
+		height 35px
+.form__field_7-12
+	.form__quant-image
+		width 17px
+		height 40px
+.form__field_12-18
+	.form__quant-image
+		width 19px
+		height 45px
+.form__field_adult
+	.form__quant-image
+		width 19px
+		height 45px
+.form__quant-name
+	font-size 12px
+	color #000
+
+.form__quant
+	position absolute
+	top 3px
+	right 12px
+	margin-top 0
+	height 30px
+	display none
+.form__quant-input
+	width 14px
+	height 25px
+	display none
+.form__quant-buttons
+	position absolute
+	top 0
+	right 0
+	height 30px
+	display inline-block
+	vertical-align top
+	font-size 14px
+	text-align center
+	z-index 1
+.form__quant-button
+	display block
+	width 12px
+	height 12px
+	background #fff
+	cursor pointer
+	user-select none
+	color #828282
+	line-height 12px
+	&:hover
+		color #157460
+.form__quant-button_up
+	position absolute
+	top 0
+	left 0
+.form__quant-button_down
+	position absolute
+	bottom 0
+	left 0
+
+.form__row_summary
+	padding-top 0
+	font-family $rM
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+.form__summary
+	color #000
+	+r(760px)
+		margin-bottom 10px
+		width 100%
+		text-align center
+.form__summary-val
+	color #157460
+	+r(760px)
+		width 100%
+		text-align center
+	// span
+	// 	display inline-block
+	// 	vertical-align top
+	// 	width 33%
+
+.form__submit
+	@extends .button
+	padding-top 15px
+	padding-bottom 15px
+	width 100%
+	font-size 24px
+	text-align center
+
+
+.form_subscribe
+	font-size 0
+	.form__row
+		margin 0
+		border-bottom none
+		display flex
+		flex-wrap nowrap
+		flex-grow 1
+		justify-content space-between
+		+r(1024px)
+			flex-wrap wrap
+
+			// display block
+	.form__field_text
+		margin-right 55px
+		width 304px
+		display inline-block
+		vertical-align top
+		&:last-child
+			margin-right 0
+		+r(1024px)
+			margin-right 0
+			margin-bottom 20px
+			display block
+			width 48%
+		+r($m)
+			width 100%
+	.form__input
+		padding 20px 20px 14px 20px
+		width 100%
+		height 66px
+		font-size 18px
+		color #828282
+		background #fff
+		border 1px solid #828282
+		+placeholder()
+			color #828282
+	.form__submit
+		@extends .button
+		padding-left 30px
+		padding-right 30px
+		width 254px
+		+r(1024px)
+			// padding-top 15px
+			// padding-bottom 15px
+			width 48%
+			height 66px
+		+r($m)
+			width 100%
+
+
+.form_popup
+	.form__row
+		padding 0
+	.form__submit
+		font-size 18px
+
+
+
+
+.taxi-age,
+.taxi-age-1,
+.taxi-age-2
+	fill #828282
+
+.form__field_quant
+	svg
+		fill #828282
+.form__rules-icon
+	fill #828282
+
+.form__field_quant
+	&:hover
+		svg,
+		.taxi-age-1,
+		.taxi-age-2,
+		.taxi-age
+			fill #157460
+
+
+.taxi-close,
+.taxi-menu,
+.nav__icon,
+.nav__icon-close
+	fill #157460
+
+.taxi-inst,
+.taxi-vk,
+.taxi-fb
+	fill #000

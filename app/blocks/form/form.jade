@@ -1,0 +1,134 @@
+include ../icon/icon
+
+mixin form-order()
+	.map__form-w
+		
+		form.form.map__form.form_order(action="" method="post")
+			.form__row.form__row_first
+				.form__field.form__field_text
+					input#form-phone.form__input(type="text", value="")
+					label.form__label(for="form-phone") Номер телефона<sup>*</sup>
+				.form__field.form__field_text
+					input#form-name.form__input(type="text", value="")
+					label.form__label(for="form-name") Ваше имя<sup>*</sup>
+			
+			.form__row.form__row_address
+				.form__field-w
+					.form__field.form__field_text
+						input.form__input(type="text", value="" placeholder="Откуда")
+					.form__field.form__field_text
+						input.form__input(type="text", value="" placeholder="ул. Ленина, д. 25")
+					
+						
+				a.form__add-address(href="#add") +  Добавить адрес
+			
+			.form__row.form__row_service
+				.form__field.form__field_select.form__field_service
+					select#form-service.form__select(name="service")
+						option(value="children") Детское такси
+						option(value="female") Женское такси
+						option(value="old") Сопровождение пожилых людей
+						option(value="courier") Курьерские услуги
+						option(value="ambulance") Поездка в поликлиннику
+						option(value="air") Поездка к Ж/Д и Авиавокзалу
+						
+					label.form__label(for="form-service") Выберите услугу<sup>*</sup>
+				.form__field.form__field_radio.form__field_gender
+					.form__gender Пол водителя:
+						.form__gender-w
+							.form__gender-item
+								input#gender-female(type="radio" value='male' name="gender" checked)
+								label(for="gender-female") Муж
+							.form__gender-item
+								input#gender-male(type="radio" value='female' name="gender")
+								label(for="gender-male") Жен
+				.form__field.form__field_select.form__field_time
+					select#form-time.form__select(name="time")
+						option(value="01") Выберите время
+						option(value="02") 01:00
+						option(value="03") 02:00
+						option(value="04") 03:00
+						option(value="05") 04:00
+						option(value="06") 05:00
+						option(value="07") 06:00
+						
+			.form__row.form__row_quant
+				.form__field.form__field_0-8.form__field_quant(data-age="0-8")
+					+icon('baby-icon', true).form__quant-image
+					.form__quant-name 0-8 мес.
+					.form__quant  
+						input.form__quant-input(type='text' value='0' name='age_0-8')
+						.form__quant-buttons
+							.form__quant-button.form__quant-button_up +
+							.form__quant-button.form__quant-button_down –
+							
+				.form__field.form__field_8-7.form__field_quant(data-age="8-7")
+					+icon('baby-2-icon', true).form__quant-image
+					.form__quant-name 8 мес.-7 лет
+					.form__quant
+						input.form__quant-input(type='text' value='0' name='age_8-7')
+						.form__quant-buttons
+							.form__quant-button.form__quant-button_up +
+							.form__quant-button.form__quant-button_down –
+							
+				.form__field.form__field_7-12.form__field_quant(data-age="7-12")
+					+icon('child-icon', true).form__quant-image
+					.form__quant-name 7-12 лет
+					.form__quant
+						input.form__quant-input(type='text' value='0' name='age_7-12')
+						.form__quant-buttons
+							.form__quant-button.form__quant-button_up +
+							.form__quant-button.form__quant-button_down –
+							
+				.form__field.form__field_12-18.form__field_quant(data-age="12-18")
+					+icon('teen-icon', true).form__quant-image
+					.form__quant-name 12-18 лет
+					.form__quant
+						input.form__quant-input(type='text' value='0' name='age_12-18')
+						.form__quant-buttons
+							.form__quant-button.form__quant-button_up +
+							.form__quant-button.form__quant-button_down –
+							
+				.form__field.form__field_adult.form__field_quant(data-age="adult")
+					+icon('adult-icon', true).form__quant-image
+					.form__quant-name Взрослый
+					.form__quant
+						input.form__quant-input(type='text' value='0' name='age_adult')
+						.form__quant-buttons
+							.form__quant-button.form__quant-button_up +
+							.form__quant-button.form__quant-button_down –
+							
+			.form__row.form__row_summary
+				.form__summary Количество пассажиров:
+				.form__summary-val 1  младенец; 1 ребенок (7-12 лет) 
+					
+		
+			input.form__submit(type="submit" value="Заказать такси")
+		
+		a.form__rules(href="#rules") 
+			.form__rules-w
+				.form__rules-text Правила
+				+icon('rules-icon', true).form__rules-icon
+				
+mixin form-subscribe()
+	form.form.form_subscribe(action="" method="post")
+		.form__row
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="Номер телефона")
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="Ваше имя")
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="E-mail")
+			input.form__submit(type="submit" value='Оставить заявку')
+
+
+mixin form-popup()
+	form.form.form_subscribe.form_popup(action="" method="post")
+		.form__row
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="Номер телефона")
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="Ваше имя")
+			.form__field.form__field_text
+				input.form__input(type="text" value="" placeholder="E-mail")
+			input.form__submit(type="submit" value='Оставить заявку')

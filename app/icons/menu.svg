@@ -1,0 +1,16 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 17">
+  <title>menu</title>
+  <g id="Canvas">
+    <g id="menu">
+      <g id="Line">
+        <path id="path0_stroke" data-name="path0 stroke" class="taxi-menu" d="M0,3H25V0H0Z"/>
+      </g>
+      <g id="Line-2" data-name="Line">
+        <path id="path0_stroke-2" data-name="path0 stroke" class="taxi-menu" d="M0,10H25V7H0Z"/>
+      </g>
+      <g id="Line-3" data-name="Line">
+        <path id="path0_stroke-3" data-name="path0 stroke" class="taxi-menu" d="M0,17H25V14H0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

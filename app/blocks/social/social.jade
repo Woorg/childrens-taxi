@@ -1,0 +1,15 @@
+include ../icon/icon
+
+mixin social()
+	.social.footer__social
+		ul.social__list
+			li.social__item.social__item_vk
+				a.social__link(href="#") Vk
+					+icon('vk-icon', true).social__icon
+			li.social__item.social__item_fb
+				a.social__link(href="#") Facebook
+					+icon('fb-icon', true).social__icon
+			li.social__item.social__item_inst
+				a.social__link(href="#") Instagram
+					+icon('inst-icon', true).social__icon
+					

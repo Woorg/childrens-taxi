@@ -1,0 +1,36 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/map/map
+include /blocks/form/form
+include /blocks/section/section
+include /blocks/about/about
+include /blocks/subscription/subscription
+include /blocks/services/services
+include /blocks/partners/partners
+
+include /blocks/footer/footer
+include /blocks/popup/popup
+
+
+
+block head
+	- var pageTitle = 'Семейный водитель';
+
+block content
+	+header()
+	//- +section()._map
+	+map()#order
+		.map__in
+			+form-order()
+		#map.map__area
+	//- +section()._about
+	+about()
+	//- +section()._subscription
+	+subscription()
+	//- +section()._services
+	+services()
+	//- +section()._partners
+	+partners()
+	+footer()
+	+popup()

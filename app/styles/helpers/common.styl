@@ -1,0 +1,163 @@
+html,
+body
+	height 100%
+
+.in
+	margin auto
+	padding-left 25px
+	padding-right 25px
+	max-width 1390px
+	width 100%
+	+r($t)
+		max-width 768px
+		padding-left 20px
+		padding-right 20px
+	+r($m)
+		max-width 425px
+		padding-left 15px
+		padding-right 15px
+
+.page
+	padding-top 62px
+	font-family $rR
+	font-weight normal
+	font-size 18px
+	line-height 1.4
+	color $text
+
+.taxi-close,
+.taxi-menu
+	fill #157460
+
+.taxi-inst,
+.taxi-vk,
+.taxi-fb
+	fill #000
+
+
+
+.button
+	border none
+	padding 19px 20px 18px 30px
+	display inline-block
+	vertical-align top
+	text-align center
+	line-height 1
+	color #fff
+	background #157460
+	font-family $rR
+	font-size 24px
+	font-weight normal
+	border-radius 0
+	text-decoration none
+	tr(background .3s ease)
+	&:hover,
+	&:focus
+		background darken(#157460 , 10)
+		color #fff
+		text-decoration none
+	+r($m)
+		font-size 18px
+
+.resp-image
+	img
+		max-width 100%
+		height auto
+
+
+// titles
+
+.title
+	position relative
+	padding-bottom 10px
+	font-family $rR
+	font-size 48px
+	line-height 1.4
+	color #333
+	&:after
+		position absolute
+		top 100%
+		left 0
+		min-width 587px
+		height 5px
+		background #157460
+		content ''
+	+r($t)
+		font-size 36px
+		&:after
+			min-width 100%
+			max-width 587px
+	+r($m)
+		font-size 24px
+.title-second
+	margin-bottom 40px
+	font-family $rR
+	font-size 36px
+	line-height 1.4
+	color #333
+	+r($t)
+		font-size 24px
+	+r($m)
+		font-size 18px
+
+// wysiwyg editor styles
+
+.wysiwyg
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		margin-bottom 30px
+		font-family $rR
+		font-size 16px
+		line-height 1.4
+		text-transform uppercase
+	h1
+		margin-bottom 30px
+	h2
+		margin-bottom 30px
+	h3
+		margin-bottom 30px
+	h4
+		margin-bottom 30px
+	h5
+		margin-bottom 30px
+	p
+		margin-bottom 25px
+		font-family $rR
+		font-size 18px
+		line-height 1.4
+		+r($t)
+			font-size 16px
+		+r($m)
+			font-size 14px
+		b
+			font-family $rB
+	pre
+		margin-bottom 30px
+		padding-bottom 25px
+
+	ul,
+	ol
+		margin-bottom 30px
+	ul
+		li
+			margin-bottom 8px
+
+	img
+		margin-bottom 30px
+		max-width 100%
+		height auto
+	blockquote
+		position relative
+		margin-bottom 30px
+		padding-top 10px
+		padding-bottom 10px
+		padding-left 20px
+		font-size 16px
+		p
+			margin-bottom 0
+	a
+		text-decoration none

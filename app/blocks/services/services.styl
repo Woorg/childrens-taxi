@@ -1,0 +1,48 @@
+.services
+	&__in
+		@extends .in
+		padding-bottom 45px
+		overflow hidden
+	&__title
+		@extends .title
+		margin-bottom 60px
+	&__list
+		margin-right -25px
+		margin-right ratio-percentage(-25, 1390)
+		font-size 0
+		+r($m)
+			margin-right 0
+	&__item
+		margin-right 25px
+		margin-right ratio-percentage(25, 1390)
+		margin-bottom 30px
+		padding-top 30px
+		width 430px
+		width ratio-percentage(430, 1390)
+		min-height 377px
+		display inline-block
+		vertical-align top
+		font-size 18px
+		font-family $rM
+		+r($t)
+			width 48%
+			min-height auto
+		+r($m)
+			margin-right 0
+			width 100%
+	&__link
+		display block
+		text-align center
+		color inherit
+		text-decoration none
+	&__image
+		margin 0 auto 20px
+		@extends .resp-image
+		width 310px
+		height 285px
+		width ratio-percentage(310, 430)
+		height auto
+		+r($m)
+			margin-right 0
+			width auto
+			text-align center

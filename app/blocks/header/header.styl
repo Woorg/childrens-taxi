@@ -1,0 +1,167 @@
+.header
+	position fixed
+	z-index 10
+	top 0
+	left 0
+	width 100%
+	display block
+	background #fff
+
+	&__in
+		@extends .in
+		min-height 62px
+		clr()
+		+r(680px)
+			min-height 96px
+	&__logo
+		margin-top 10px
+		margin-right 172px
+		margin-bottom 10px
+		float left
+		width 312px
+		height 42px
+		+r($d)
+			margin-right 106px
+		+r($t)
+			margin-right 10px
+		+r($m)
+			margin-right 0
+			float none
+			display block
+			width 100%
+			clr()
+	&__nav
+		float left
+		+r($d)
+			margin-top 21px
+			float right
+		+r(680px)
+			margin-top 5px
+			float none
+			clear both
+	&__phone
+		margin-top 18px
+		float right
+		+r($d)
+			margin-top 12px
+			float left
+		+r($t)
+			margin-top 12px
+		+r(680px)
+			position absolute
+			top 60px
+			left 20px
+			margin-top 0
+			margin-bottom 0
+			clear both
+
+.header_fixed
+	box-shadow 0 20px 15px rgba(0, 0, 0, 0.25)
+	tr(all .3s ease)
+
+.logo
+	font-family $n
+	font-size 24px
+	color #157460
+	text-decoration none
+	white-space nowrap
+	+r($m)
+		font-size 18px
+	&__image
+		margin-right 9px
+		display inline-block
+		vertical-align middle
+		width 117px
+		height 42px
+		+r($m)
+			float left
+	&__text
+		display inline-block
+		vertical-align middle
+		+r($m)
+			float right
+.nav
+	+r(690px)
+		clr()
+	&__list
+		font-size 0
+		+r($d)
+			display none
+	&__trigger
+		display none
+		width 25px
+		height 25px
+		cursor pointer
+		+r($d)
+			display block
+		+r(690px)
+			float right
+	&__checkbox
+		display none
+		&:checked ~
+			.nav__trigger
+				padding-bottom 80px
+				+r(690px)
+					padding-bottom 40px
+				.nav__icon
+					display none
+				.nav__icon-close
+					display block
+		&:checked +
+			.nav__list
+				position absolute
+				bottom 0
+				left 25px
+				display block
+				+r(690px)
+					top 100%
+					bottom auto
+					left 0
+					right 0
+					padding-left 15px
+					padding-right 15px
+					background #fff
+					box-shadow 0 20px 15px rgba(0, 0, 0, 0.25)
+					tr(all .3s ease)
+	&__icon,
+	&__icon-close
+		width 25px
+		height 25px
+
+	&__icon-close
+		display none
+	&__item
+		margin-right 40px
+		display inline-block
+		vertical-align top
+		font-size 14px
+		&:last-child
+			margin-right 0
+		+r(690px)
+			margin-right 0
+			display block
+	&__item_active
+		.nav__link
+			border-bottom 4px solid #157460
+			color #333
+	&__link
+		padding-top 25px
+		padding-bottom 14px
+		display block
+		color #828282
+		text-decoration none
+		border-bottom 4px solid transparent
+		tr(all .3s ease)
+		&:hover
+			border-bottom 4px solid #157460
+			color #333
+		+r($t)
+			padding-top 12px
+			padding-bottom 7px
+.phone
+	color #333
+	font-size 24px
+	text-decoration none
+	&__code
+		color #828282
+		font-size 16px

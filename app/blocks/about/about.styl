@@ -1,0 +1,36 @@
+.about
+	display block
+	&__in
+		@extends .in
+		padding-top 120px
+		padding-bottom 60px
+		clr()
+		+r($t)
+			padding-top 60px
+	&__content
+		clr()
+
+	&__title
+		@extends .title
+		margin-bottom 40px
+	&__text
+		@extends .wysiwyg
+		// margin-bottom 30px
+		float left
+		width 864px
+		width ratio-percentage(864,1390)
+		+r($t)
+			float none
+			width auto
+	&__button
+		@extends .button
+	&__image
+		width 450px
+		width ratio-percentage(450,1390)
+		float right
+		+r($t)
+			float none
+			width auto
+		img
+			max-width 100%
+			height auto

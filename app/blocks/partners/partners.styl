@@ -1,0 +1,42 @@
+.partners
+	display block
+	&__in
+		@extends .in
+		padding-top 45px
+		padding-bottom 60px
+		+r($m)
+			padding-top 0
+			padding-bottom 0
+	&__title
+		@extends .title
+		margin-bottom 22px
+	&__list
+		font-size 0
+		display flex
+		flex-wrap nowrap
+		justify-content space-between
+		align-items center
+		+r($d)
+			flex-wrap wrap
+
+	&__item
+		+r($d)
+			width 50%
+		+r($t)
+			display flex
+			width 100%
+			min-height 194px
+	&__logo
+		margin auto
+	&__item_1
+		.partners__logo
+			retinaSprite($partner_1_group)
+	&__item_2
+		.partners__logo
+			retinaSprite($partner_2_group)
+	&__item_3
+		.partners__logo
+			retinaSprite($partner_3_group)
+	&__item_4
+		.partners__logo
+			retinaSprite($partner_4_group)

@@ -1,0 +1,21 @@
+include ../social/social
+include ../icon/icon
+
+
+mixin footer()
+	footer#contacts.footer
+		.footer__in
+			.footer__top
+				a.footer__to-top(href="#top") 
+					+icon('to-top', true).footer__to-top-icon
+					.footer__to-top-text Наверх
+			+social()
+			.footer__phone тел.:
+				a.footer__phone-link(href="tel:+73433517255") +7(343) 351-72-55
+			.footer__emails
+				a.footer__email(href="mailto:order@family-drive.ru") order@family-drive.ru
+				a.footer__email(href="mailto:family-drive2017@yandex.ru") family-drive2017@yandex.ru
+			.footer__bottom
+				.footer__copyright 2017 (с) Семейное такси. Все права защищены.
+				.footer__privacy
+					a.footer__privacy-link(href="#") Политика конфиденциальности
